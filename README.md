@@ -20,15 +20,39 @@ the [JSONPlaceholder API](https://jsonplaceholder.typicode.com/users).
 ## 🛠️ Tech Stack / Libraries
 
 - [Expo](https://expo.dev/) – for running the app
+
+  - `expo`: ~54.0.12
+  - `expo-status-bar`: ~3.0.8
+
 - [React Navigation](https://reactnavigation.org/) – navigation between screens
-  - `@react-navigation/native`
-  - `@react-navigation/native-stack`
+
+  - `@react-navigation/native`: ^7.1.17
+  - `@react-navigation/native-stack`: ^7.3.26
+  - `react-native-gesture-handler`: ^2.28.0
+  - `react-native-reanimated`: ^4.1.2
+  - `react-native-safe-area-context`: ^5.6.1
+  - `react-native-screens`: ^4.16.0
+
 - [Redux Toolkit](https://redux-toolkit.js.org/) – state management
+
+  - `@reduxjs/toolkit`: ^2.9.0
+
 - [React Redux](https://react-redux.js.org/) – connect Redux with React
   components
+
+  - `react-redux`: ^9.2.0
+
 - [Redux Thunk](https://github.com/reduxjs/redux-thunk) – async logic/middleware
   for API calls
-- [Axios](https://axios-http.com/) – HTTP client for fetching users
+
+- [React](https://react.dev/) – core framework
+
+  - `react`: 19.1.0
+  - `react-native`: 0.81.4
+
+- [React Native Dotenv](https://www.npmjs.com/package/react-native-dotenv) –
+  environment variables
+  - `react-native-dotenv`: ^3.4.11
 
 ---
 
