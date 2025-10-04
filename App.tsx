@@ -1,20 +1,40 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import Users from './src/screens/Users'
+import UserDetails from './src/screens/UserDetails'
+import { Provider } from 'react-redux'
+import { store } from './src/store'
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+export type RootStackParamList = {
+	Users: undefined
+	UserDetails: { userId: number }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const Stack = createNativeStackNavigator<RootStackParamList>()
+
+export default function App() {
+	return (
+		<Provider store={store}>
+			<NavigationContainer>
+				<Stack.Navigator initialRouteName='Users'>
+					<Stack.Screen
+						name='Users'
+						component={Users}
+						options={{
+							title: 'Users Directory',
+							headerTitleAlign: 'center',
+						}}
+					/>
+					<Stack.Screen
+						name='UserDetails'
+						component={UserDetails}
+						options={{
+							title: 'User Details',
+							headerTitleAlign: 'center',
+						}}
+					/>
+				</Stack.Navigator>
+			</NavigationContainer>
+		</Provider>
+	)
+}
