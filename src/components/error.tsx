@@ -2,7 +2,6 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { ErrorProps } from '../types/error'
 
 const Error = ({ error, handleRefresh }: ErrorProps) => {
-	console.log('error', error)
 	return (
 		<View style={styles.center}>
 			<Text style={styles.error}>{error}</Text>
